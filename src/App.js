@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import css from './styles/App.module.css';
+import cssMain from './styles/Main.module.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Error} from "./pages/Error";
+import {Main} from "./components/Main";
+import {Header} from "./components/header/Header";
+import {Footer} from "./components/Footer";
 
 function App() {
+const cs =[cssMain.main,css.conteiner,cssMain.mainContainer];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className={css.App}>
+          <BrowserRouter>
+              <Header/>
+              <div className={cs.join(" ")}>
+
+              <Routes>
+                  <Route path={"/"} element={<Main/>}/>
+                  <Route path={"*"} element={<Error/>}/>
+              </Routes>
+
+              </div>
+              <Footer/>
+          </BrowserRouter>
+
+      </div>
   );
 }
 

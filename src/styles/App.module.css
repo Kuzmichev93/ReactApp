@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.conteiner{
+    max-width: 1440px;
+    background-color: blue;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+
+}
+
+@media(max-width: 800px){
+    .conteiner{
+        width: 700px;
+    }
+}
