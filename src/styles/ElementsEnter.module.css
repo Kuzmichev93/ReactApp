@@ -1,0 +1,33 @@
+ .container_elements_enter{
+    display: flex;
+    padding-top:15px;
+    flex-direction: column;
+    height: 100%;
+}
+
+ .container{
+     display: flex;
+     flex-direction: column;
+     height: 100px;
+     justify-content: center;
+ }
+
+ .input_container{
+     height: 40px;
+     display: flex;
+     flex-direction: column;
+     justify-content: end;
+ }
+
+ .input_enter{
+     width: 100%;
+     height: 30px;
+     font-size: 20px;
+     border: none;
+     border-bottom: 1px solid;
+     outline: none;
+ }
+
+ .input_enter:hover{
+     border-bottom: 1px solid navajowhite;
+ }

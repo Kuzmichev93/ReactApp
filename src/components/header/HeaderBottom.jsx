@@ -1,6 +1,18 @@
 import css from "../../styles/Header.module.css";
+import {useState} from "react";
 
-export const HeaderBottom = ({setBorder,value,setValue,setFlag,setFlagEnter,inputDelele,addcss}) =>{
+export const HeaderBottom = ({setBorder,setFlagEnter}) =>{
+    const [value, setValue] = useState('')
+
+
+    const addcss = [css.icon_container,css.marg];
+
+    const inputDelele = [css.input_delete]
+    const [flag,setFlag] = useState(false);
+    if(flag && value.length>0){
+        inputDelele.push(css.input_dispaly)
+    }
+
     return (
         <div className={css.bottom}>
             <div className={css.name_site}>AIK</div>
@@ -15,13 +27,16 @@ export const HeaderBottom = ({setBorder,value,setValue,setFlag,setFlagEnter,inpu
                 <input type={"text"} className={css.input_search}
                        value={value}
                        onChange={(e) => {
-                           setFlag(true);
                            setValue(e.target.value)
-                       }}>
+                           setFlag(true)
+
+                       }}
+
+                >
                 </input>
                 <div className={inputDelele.join(" ")} onClick={() => {
+                    setValue('');
                     setFlag(false);
-                    setValue("")
                 }}
 
                 ></div>
