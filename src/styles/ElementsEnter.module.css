@@ -8,8 +8,9 @@
  .container{
      display: flex;
      flex-direction: column;
-     height: 100px;
+     height: 105px;
      justify-content: center;
+     position: relative;
  }
 
  .input_container{
@@ -17,6 +18,13 @@
      display: flex;
      flex-direction: column;
      justify-content: end;
+ }
+
+ .error_email{
+     height: 35px;
+     position: absolute;
+     bottom: 0px;
+     color: red;
  }
 
  .input_enter{
@@ -30,4 +38,34 @@
 
  .input_enter:hover{
      border-bottom: 1px solid navajowhite;
+ }
+
+ .button_container{
+     height: 40px;
+     display: flex;
+     justify-content: center;
+ }
+ .button_enter{
+     font-size: 20px;
+     color: white;
+     width: 250px;
+     border-radius: 15px;
+     cursor: pointer;
+     border: none;
+     background-color: darkgrey;
+
+ }
+
+ .button_active{
+     background-color:#ff9100;;
+ }
+ .button_active:active{
+     background-color: #ffae00;
+ }
+
+ .container_elements_registration{
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     padding-top:15px;
  }

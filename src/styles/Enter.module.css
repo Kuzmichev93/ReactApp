@@ -9,7 +9,7 @@
 }
 
 .enter_container{
-    height: 700px;
+    min-height: 435px;
     width: 450px;
     margin:auto;
     background-color: white;

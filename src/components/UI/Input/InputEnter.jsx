@@ -1,6 +1,7 @@
 import {useState} from "react";
 import css from "../../../styles/ElementsEnter.module.css";
-export const InputEnter = ({message})=>{
+import {regularexpressions} from "../../utils/regularexpressions";
+export const InputEnter = ({message,setValue})=>{
     const[flag,setFlag]=useState(true);
 
     return (
@@ -8,6 +9,9 @@ export const InputEnter = ({message})=>{
             <input className={css.input_enter} type={"text"} placeholder={flag?message:''}
                    onClick={()=>setFlag(false)}
                    onMouseLeave={() => setFlag(true)}
+                   onChange={(e)=>{
+                       //regularexpressions(e.target.value,arg)
+                       setValue(e.target.value)}}
             ></input>
 
         </div>
