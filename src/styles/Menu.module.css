@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    width: 300px;
+    background-color: white;
+    flex-direction: column;
+    padding-top: 40px;
+    border-right: 2px solid silver;
+}
+.name{
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    margin-left: 60px;
+    align-items: center;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    padding-left:30px;
+    padding-right: 10px;
+
+}
+.list_element{
+    display: flex;
+    width: 210px;
+}
+.list_extra{
+    margin-top: 10px;
+}
+
+.text{
+    word-break: break-all;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.text:hover{
+    color: #ffae00;
+}
+
+.icon_computer{
+    background-image: url("../icons/menu/185024_computer_imac_icon.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height:20px;
+}
+.icon_television{
+    background-image: url("../icons/menu/290126_monitor_screen_television_tv_video_icon.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height:20px;
+}
+
+.icon_mobile{
+    background-image: url("../icons/menu/290123_call_communication_mobile_phone_telephone_icon.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height:20px;
+}
+
+.icon_washing{
+    background-image: url("../icons/menu/976610_appliances_clothes washer_laundry_washer_washing machine_icon.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height:20px;
+}
+
+.extra_container{
+    border: none;
+    padding-top: 80px;
+    position: relative;
+    width: 350px;
+}
+
+.extra_close{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 3px;
+}
+extra_element{
+    width: 200px;
+}
+
+.extra_text{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.extra_text:hover{
+    color: #ffae00;
+}

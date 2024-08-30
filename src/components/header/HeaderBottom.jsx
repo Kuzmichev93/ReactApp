@@ -1,7 +1,7 @@
 import css from "../../styles/Header.module.css";
 import {useState} from "react";
 
-export const HeaderBottom = ({setBorder,setFlagEnter}) =>{
+export const HeaderBottom = ({setBorder,setFlagEnter,setFlagMenu}) =>{
     const [value, setValue] = useState('')
 
 
@@ -17,6 +17,7 @@ export const HeaderBottom = ({setBorder,setFlagEnter}) =>{
         <div className={css.bottom}>
             <div className={css.name_site}>AIK</div>
             <div className={css.menu_container}
+                 onClick={()=>setFlagMenu(true)}
                  onMouseEnter={(e) => setBorder(e, css.menu_container)}
                  onMouseLeave={(e) => setBorder(e, css.menu_container)}
             >

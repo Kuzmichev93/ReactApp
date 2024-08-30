@@ -3,7 +3,8 @@ import {ButtonEnter} from "../UI/Button/ButtonEnter";
 import {InputEnter} from "../UI/Input/InputEnter";
 import {useState} from "react";
 import {regularexpressions} from "../utils/regularexpressions";
-export const ElementsRegistration = ()=>{
+import {Authorization} from "../../API/Authorization";
+export const ElementsRegistration = ({setFlagEnter})=>{
     const[inputName, setInputName] = useState("");
     const[inputLastName, setInputLastName] = useState("");
     const [inputEmail, setInputEmail] = useState("");
@@ -30,7 +31,7 @@ export const ElementsRegistration = ()=>{
         flagDisabled = true;
 
     }
-
+    const body = {"name":inputName,"lastname":inputLastName,"email":inputEmail,"password":inputPassword};
     return(
         <div className={css.container_elements_registration}>
             <div className={css.container}>
@@ -54,7 +55,8 @@ export const ElementsRegistration = ()=>{
                     <div className={css.error_email}>Поле может содержать только латинские буквы и цифры</div>}
             </div>
             <div className={css.container}>
-                <ButtonEnter nameButton={"Зарегистрироваться"} flagDisabled={flagDisabled}/>
+                <ButtonEnter nameButton={"Зарегистрироваться"}
+                             flagDisabled={flagDisabled} method={Authorization.sendRegistration} body={body} setFlagEnter={setFlagEnter}/>
             </div>
 
         </div>

@@ -23,7 +23,7 @@ export const Enter = ({setFlagEnter})=>{
                         <div className={elementFlag?cssEnter.element:colorEnter.join(" ")}
                              onClick={()=>setElementFlag(false)}>Регистрация</div>
                     </div>
-                    {elementFlag?<ElementsEnter/>:<ElementsRegistration/>}
+                    {elementFlag?<ElementsEnter setFlagEnter={setFlagEnter}/>:<ElementsRegistration setFlagEnter={setFlagEnter}/>}
                 </div>
             </div>
         </div>

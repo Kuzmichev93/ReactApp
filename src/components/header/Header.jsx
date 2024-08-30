@@ -3,6 +3,7 @@ import cssApp from "../../styles/App.module.css"
 import {useEffect, useState} from "react";
 import {Enter} from "../enter/Enter";
 import {HeaderBottom} from "./HeaderBottom";
+import {Menu} from "../menu/Menu";
 export const Header = () => {
 
     function setBorder(event,classname){
@@ -35,7 +36,7 @@ export const Header = () => {
     }
 
     const [flagEnter,setFlagEnter] = useState(false);
-
+    const [flagMenu,setFlagMenu] = useState(false);
 
     return(
         <header className={css.header}>
@@ -43,10 +44,12 @@ export const Header = () => {
                 <div className={css.top}></div>
                 <HeaderBottom setFlagEnter={setFlagEnter}
                               setBorder={setBorder}
+                              setFlagMenu={setFlagMenu}
 
                 />
             </div>
             {flagEnter && <Enter setFlagEnter={setFlagEnter}/>}
+            {flagMenu && <Menu setFlagMenu={setFlagMenu}/>}
         </header>
 
     )

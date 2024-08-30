@@ -4,7 +4,7 @@ import {useState} from "react";
 import {ButtonEnter} from "../UI/Button/ButtonEnter";
 import {regularexpressions} from "../utils/regularexpressions";
 
-export const ElementsEnter = ()=>{
+export const ElementsEnter = ({setFlagEnter})=>{
     const [inputEmail, setInputEmail] = useState("");
     const [inputPassword, setInputPassword] = useState("");
     let flagEmail = regularexpressions(inputEmail,"[^a-zA-Z0-9@.]")
