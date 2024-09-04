@@ -14,6 +14,7 @@ export const Pagination = ({paginat,page,setPage,setExtraPage}) => {
                             if (page == e.target.innerText) {
                                 return
                             } else {
+                                window.scrollTo(0,0)
                                 setPage(e.target.innerText)
                                 url(`/laptops/${e.target.innerText}`)
                                 setExtraPage(0)

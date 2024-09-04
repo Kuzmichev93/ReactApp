@@ -44,7 +44,7 @@ export const Laptop = () => {
                         arrayLaptop = await LaptopApi.getLaptop(laptopIds.data[page])
                     }
 
-                    if(arrayLaptop.data.length<24){
+                    if(arrayLaptop.data.length<=12){
                         setData(0)
                         setExtraData(arrayLaptop.data)
                     }
@@ -73,6 +73,7 @@ export const Laptop = () => {
             return
         }
         if(data.length>0 && extraPage < data.length){
+            console.log(777)
             setExtraData([...extraData,...data[extraPage]])
 
         }
