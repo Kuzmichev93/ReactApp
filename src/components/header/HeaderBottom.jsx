@@ -1,9 +1,10 @@
 import css from "../../styles/Header.module.css";
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export const HeaderBottom = ({setBorder,setFlagEnter,setFlagMenu}) =>{
     const [value, setValue] = useState('')
-
+    const router = useNavigate()
 
     const addcss = [css.icon_container,css.marg];
 
@@ -15,7 +16,7 @@ export const HeaderBottom = ({setBorder,setFlagEnter,setFlagMenu}) =>{
 
     return (
         <div className={css.bottom}>
-            <div className={css.name_site}>AIK</div>
+            <div className={css.name_site} onClick={()=>router("/")}>AIK</div>
             <div className={css.menu_container}
                  onClick={()=>setFlagMenu(true)}
                  onMouseEnter={(e) => setBorder(e, css.menu_container)}

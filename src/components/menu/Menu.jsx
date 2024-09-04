@@ -38,7 +38,7 @@ export const Menu = ({setFlagMenu}) => {
                 </div>
                 <div>{menu}</div>
             </div>
-            {extraMenu && <ExtraMenu extraMenu={extraMenu} setExtraMenu={setExtraMenu}/>}
+            {extraMenu && <ExtraMenu extraMenu={extraMenu} setFlagMenu={setFlagMenu}/>}
 
         </div>
     )

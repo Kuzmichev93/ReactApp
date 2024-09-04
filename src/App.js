@@ -6,6 +6,7 @@ import {Error} from "./pages/Error";
 import {Main} from "./components/Main";
 import {Header} from "./components/header/Header";
 import {Footer} from "./components/Footer";
+import {Laptop} from "./pages/Laptop";
 
 function App() {
 const cs =[cssMain.main,css.conteiner,cssMain.mainContainer];
@@ -17,6 +18,8 @@ const cs =[cssMain.main,css.conteiner,cssMain.mainContainer];
 
               <Routes>
                   <Route path={"/"} element={<Main/>}/>
+                  <Route path={"/laptops"} element={<Laptop/>}/>
+                  <Route path={"/laptops/:id"} element={<Laptop/>}/>
                   <Route path={"*"} element={<Error/>}/>
               </Routes>
 
